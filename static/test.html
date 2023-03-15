@@ -1,0 +1,19 @@
+<div class="wrapper">
+   <h2>
+     IMDB - Movie Search - FreakyJolly.com
+   </h2>
+   <mat-form-field class="example-full-width">
+     <input matInput placeholder="Search Movie" [(ngModel)]="selectedMovie" [matAutocomplete]="auto"
+       [formControl]="searchMoviesCtrl" placeholder="Min 3 Characters Ex. Ant">
+
+     <mat-autocomplete [panelWidth]="400" #auto="matAutocomplete" (optionSelected)="onSelected()"
+       [displayWith]="displayWith">
+       <mat-option *ngIf="isLoading" class="is-loading">Loading...</mat-option>
+       <ng-container *ngIf="!isLoading">
+         <mat-option *ngFor="let movie of filteredMovies" [value]="movie">
+           <span><b>{{movie.Title}}</b> ({{movie.Year}})</span>
+         </mat-option>
+       </ng-container>
+     </mat-autocomplete>
+   </mat-form-field>
+ </div>

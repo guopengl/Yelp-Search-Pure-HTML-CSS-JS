@@ -1,0 +1,308 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* first box */
+#search-area {
+   width : 920px;
+   height: 800px;
+   border: 2px gray solid;
+   margin: 20px auto;
+}
+
+#search-area-head {
+   height: 195px;
+   padding: 50px 0 0 58px;
+   background-image: url(banner.jpeg);
+   background-size: cover;
+   background-position: bottom;
+   color: white;
+}
+
+#search-area-head>h2{
+   font-size: 25px;
+   font-weight: normal;
+   margin: 30px 0 0 0;
+}
+
+form {
+   padding: 30px 58px;
+}
+
+/* css for label begin*/
+form label{
+   color: rgb(70, 100, 163);
+   font-size: larger;
+   font-weight: bold;
+}
+
+form label::after{
+   content: '*';
+   color: red;
+   font-size: 18px;
+}
+
+.input-distance label::after{
+   content: '';
+}
+/*css for label end*/
+
+form input{
+   width: 100%;
+   height: 50px;
+   border: 2px solid rgb(172, 171, 171);
+   margin: 10px 0 0 0;
+   padding: 10px;
+   font-size: larger;
+}
+
+input:disabled{
+   background-color: rgb(185, 185, 185);
+}
+.input-distance{
+   display: inline-block;
+   width: 395px;
+   margin: 20px 0 0 0;
+}
+#input-distance{
+   display: block;
+   width: 60%;
+   font-size: larger;
+}
+
+.input-category{
+   display: inline-block;
+   width: 50%;
+   margin: 0;
+}
+
+.input-category select{
+   display: block;
+   width: 100%;
+   height: 50px;
+   border: 2px solid rgb(172, 171, 171);
+   margin: 10px 0 0 0;
+   font-size: larger;
+   padding: 10px;
+}
+
+.input-location{
+   margin: 20px 0 0 0;
+}
+
+form hr{
+   margin: 35px 0 20px 0;
+   border: 1px solid rgb(70, 100, 163);
+}
+
+form p{
+   color: rgb(70, 100, 163);
+   font-size: x-large;
+   font-weight: bold;
+}
+
+#checkbox{
+   height: 16px;
+   width: 16px;
+}
+
+input[type="submit"],input[type="button"]{
+   width: 170px;
+   height: 78px;
+   border: none;
+   background-color: rgb(70, 100, 163);
+   color: white;
+   font-size: x-large;
+   font-weight: lighter;
+   border-bottom: 10px solid rgb(39, 59, 99);
+   margin:50px 0 0 0;
+}
+
+input[type="button"]{
+   background-color: rgb(253, 173, 2);
+   border-bottom: 10px solid rgb(250, 117, 10);
+}
+
+input[type="submit"]:hover{
+   background-color: rgb(81, 115, 189);
+}
+
+input[type="button"]:hover{
+   background-color: rgb(227, 155, 0);
+}
+/*search area ends*/
+
+/*result table begins*/
+/*the whole box*/
+#result-table{
+   visibility: hidden;
+   width: 1550px;
+   margin: 150px auto;
+}
+
+#result-table>p{
+   border: 2px solid rgb(172, 171, 171);
+   text-align: center;
+   font-size: x-large;
+}
+
+table{
+   border-collapse: collapse;
+}
+/*head*/
+th{
+   border: 2px solid rgb(172, 171, 171);
+   background-color: rgb(70, 100, 163);
+   height: 78px;
+   font-size: x-large;
+}
+
+th:nth-of-type(1){
+   width: 78px;
+}
+
+th:nth-of-type(2){
+   width: 170px;
+}
+
+th:nth-of-type(3){
+   width: 840px;
+}
+th:nth-of-type(3):hover{
+   cursor: pointer;
+}
+
+th:nth-of-type(4){
+   width: 230px;
+}
+th:nth-of-type(4):hover{
+   cursor: pointer;
+}
+
+th:nth-of-type(5){
+   width: 230px;
+}
+th:nth-of-type(5):hover{
+   cursor: pointer;
+}
+
+/*body*/
+td{
+   border: 2px solid rgb(172, 171, 171);
+   height: 174px;
+   text-align: center;
+   font-size: larger;
+}
+
+td img{
+   width: 150px;
+   height: 150px;
+}
+
+table a:hover{
+   cursor: pointer;
+   color:gray;
+}
+
+/*result table ends*/
+
+/*detail card begins*/
+
+/*large box*/
+#detail-card{
+   visibility: hidden;
+   width: 1240px;
+   margin: 0px auto;
+   padding: 30px 40px;
+   border: 2px solid rgb(172, 171, 171);
+}
+
+#detail-card>div{
+   display: inline-block;
+   width: 49.5%;
+   margin: 0 0 50px 0;
+}
+
+/*title: the name of the shop*/
+#detail-card>div:nth-of-type(1){
+   width: 100%;
+   text-align: center;
+   font-size: xx-large;
+   font-weight: bold;
+   margin: 0;
+}
+
+#detail-card>div:nth-of-type(2){
+   margin: 0 0 13.75px 0;
+}
+/* horizontal line*/
+#detail-card>hr{
+   margin: 20px 0 60px 0;
+   border: 1px solid rgb(179, 179, 179);
+}
+
+
+#detail-card>div>label{
+   display: block;
+   margin: 0 0 5px 0;
+   font-size: x-large;
+   font-weight: bold;
+}
+
+#detail-card>div>p, #detail-card>div>a{
+   font-size: large;
+   display: block;
+   width: fit-content;
+}
+
+/*the "open now" box*/
+#detail-card>div:nth-of-type(2)>p[data-status='Open-Now']{
+   width: 175px;
+   height: 60px;
+   background-color: rgb(0,118,0);
+   border-radius: 20px;
+   text-align: center;
+   line-height: 60px;
+}
+/*the "closed" box*/
+#detail-card>div:nth-of-type(2)>p[data-status='Closed']{
+   width: 175px;
+   height: 60px;
+   background-color: red;
+   border-radius: 20px;
+   text-align: center;
+   line-height: 60px;
+}
+
+#detail-card>.photos{
+   margin: 80px 0 0 0;
+   width: 100%;
+}
+
+#detail-card>.photos>div{
+   position: relative;
+   float: left;
+   margin: 0 5px;
+   height: 460px;
+   width: 32%;
+   border: 1px solid rgb(170, 170, 170);
+}
+#detail-card>.photos>div:hover{
+   border: 1px solid black;
+}
+
+#detail-card>.photos>div>img{
+   width: 100%;
+   height: auto;
+   max-height: 90%;
+}
+
+#detail-card>.photos>div>p{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   font-size: large;
+}

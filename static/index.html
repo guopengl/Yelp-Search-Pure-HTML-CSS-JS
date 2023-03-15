@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../static/main.css">
+ 
+</head>
+<body>
+   <div id="search-area">
+      <div id="search-area-head">
+         <h1>Business Search</h1>
+         <h2>Fill out the form to get businesses near you!</h2>
+      </div>
+      <form onsubmit="submitForm(event)" method="GET">
+
+         <div class="input-keyword">
+            <label>Keyword</label>
+            <input id="input-keyword" type="text" name="keyword" required="">
+         </div>
+
+         <div class="input-distance">
+            <label>Distance(miles)</label>
+            <input id="input-distance" type="text" name="distance" placeholder="10">
+         </div>
+         
+         <div class="input-category">
+            <label>Category</label>
+            <select name="category" id="input-category">
+               <option value="All">Default</option>
+               <option value="arts">Arts &amp; Entertainment</option>
+               <option value="health">Health &amp; Medical</option>
+               <option value="hotelstravel">Hotels &amp; Travel</option>
+               <option value="food">Food</option>
+               <option value="professional">Professional Services</option>
+            </select>
+         </div>
+
+         <div class="input-location">
+            <label>Location</label>
+            <input id="input-location" type="text" name="location" required="">
+         </div>
+         
+         <hr>
+
+         <p>Want us to auto-detect your location?Check here
+            <input id="checkbox" type="checkbox">
+         </p>
+
+         <input type="submit" value="SUBMIT">
+         <input id="clear-button" type="button" value="CLEAR">
+      </form>
+   </div>
+
+   <div id="result-table"></div>
+
+   <div id="detail-card"></div>
+
+
+
+   <script src="../static/main.js"></script> 
+</body>
+</html>
+
